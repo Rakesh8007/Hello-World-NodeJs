@@ -3,19 +3,4 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/
-hooks:
-   AfterInstall:
-    - location: scripts/after_install.sh
-      timeout: 300
-      runas: root
-   BeforeInstall:
-    - location: scripts/dependencies.sh
-      timeout: 300
-      runas: root
-  ApplicationStart:
-    - location: scripts/start_server.sh
-      timeout: 300
-      runas: root
-  ValidateService:
-    - location: scripts/validate_service.sh
-      timeout: 300
+
